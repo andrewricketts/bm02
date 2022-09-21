@@ -40,9 +40,9 @@ def readfile(fname):
 
 def makegraph(ddn):
     dt = ddn.strftime('%Y%m%d')
-    raw = readfile('/home/pi/Documents/BM-02/bm02-' + dt + '.csv')
+    raw = readfile('/home/pi/Documents/bm02-' + dt + '.csv')
     header = raw[0].split(',')
-    print('Generating IO graph..')
+    print('Generating graph..')
     mpl.rcParams['toolbar'] = 'None'
     fig = plt.figure()
     ax = plt.subplot()
@@ -68,7 +68,7 @@ def makegraph(ddn):
     #plt.show()
     #plt.gcf().autofmt_xdate()
     #plt.xticks(rotation='vertical', fontsize=8)
-    plt.savefig('/home/pi/Documents/Email/IO.png')
+    plt.savefig('/home/pi/Documents/IO.png')
 
 
     
